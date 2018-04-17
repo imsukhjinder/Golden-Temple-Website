@@ -1,0 +1,203 @@
+/* Presets */
+section{
+  overflow-x: hidden;
+}
+svg {
+  width: 100%;
+  height: 100%; }
+.button, a, input[type="button"] {
+  cursor: pointer; }
+a:hover {
+  text-decoration: none; }
+body{
+  overflow-x: hidden;
+  margin: 0;
+}
+/*loader */
+.loader {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: darkgoldenrod;
+  align-items: center;
+  justify-content: center;
+  color: white; }
+/* Menu */
+/* basic menu styles */
+.block-menu {
+  display: block;
+  background: goldenrod;
+  position: fixed;
+  width: 100%;
+  z-index: 102;
+margin-top: 0px;
+font-family: serif;
+ }
+
+.block-menu li {
+  display: inline-block; }
+
+.block-menu li a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  font-smoothing: antialiased;
+  text-transform: uppercase;
+  overflow: visible;
+  line-height: 20px;
+  font-size: 24px;
+  padding: 15px 10px; }
+
+/* animation domination */
+.three-d {
+  perspective: 200px;
+  transition: all .07s linear;
+  position: relative;
+  cursor: pointer; }
+
+/* complete the animation! */
+.three-d:hover .three-d-box,
+.three-d:focus .three-d-box {
+  transform: translateZ(-25px) rotateX(90deg); }
+
+.three-d-box {
+  transition: all .3s ease-out;
+  transform: translatez(-25px);
+  transform-style: preserve-3d;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/*
+	put the "front" and "back" elements into place with CSS transforms,
+	specifically translation and translatez
+*/
+.front {
+  transform: rotatex(0deg) translatez(25px); }
+
+.back {
+  transform: rotatex(-90deg) translatez(25px);
+  color: #ffe7c4; }
+
+.front, .back {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: goldenrod;
+  padding: 15px 10px;
+  color: white;
+  pointer-events: none;
+  box-sizing: border-box; }
+.menubtn {
+  display: none; }
+
+  @media screen and (max-width: 600px) {
+    .menu {
+      background-color: goldenrod;
+      position: fixed;
+      min-height: 62px;
+      z-index: 101;
+    width: 100vw;}
+    .history {
+      margin-top: 68% !important; }
+    .block-menu li {
+      display: none; }
+    .block-menu {
+      padding: 10px; }
+    .icon-bar {
+      background-color: #463202;
+      height: 4px;
+      width: 30px;
+      margin-top: 5px;
+      display: block; }
+    .menubtn {
+
+      display: flex;
+      padding: 6px;
+      border-radius: 10px;
+      background-color: transparent;
+      border: solid 3px #463202;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      color: #463202;
+      float: right;
+      z-index: 103;
+      position: relative;
+      margin-top: 5px;
+    margin-right: 20px;
+  }
+    .mtext {
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: 20px; } }
+      /*footer section */
+      .footer{
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: goldenrod;
+        box-shadow: inset 1px -1px 15px 9px rgba(0, 0, 0, 0.43);
+      }
+      .footer-links{
+        width: 100%;
+          display: flex;
+          justify-content: center;
+          color: white;
+          margin: 0 31px;
+          font-weight: lighter;
+          flex-direction: column;
+      }
+      .links{
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        height: max-content;
+        border-bottom: 3px white double;
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+        padding-bottom: 6px;
+      }
+      .links a{
+        text-decoration: none;
+        color: #794405;
+        transition: 0.5s ease-in-out;
+      }
+      .links a:hover{
+        color: white;
+      }
+      .content{
+        display: flex;
+        font-size: 20px;
+        margin-top: 5px;
+      }
+      a li{
+        list-style-type: none;
+        margin-left: 15px;
+      }
+      @media screen and (max-width: 550px) {
+        .content{
+          flex-direction: column;
+          align-items: center;
+        }
+        .mhide{
+          display: none;
+        }
+         }
+.ermsg{
+  font-size: 30px;
+  color: #710606;
+}
